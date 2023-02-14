@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cg4it_react_dotnet_todo", "cg4it_react_dotnet_todo.csproj", "{88AC1BF9-49CC-4CDB-AFB2-04F42822C0BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88AC1BF9-49CC-4CDB-AFB2-04F42822C0BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88AC1BF9-49CC-4CDB-AFB2-04F42822C0BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88AC1BF9-49CC-4CDB-AFB2-04F42822C0BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88AC1BF9-49CC-4CDB-AFB2-04F42822C0BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AB446E52-502E-4208-A4C8-995BF38E6E7C}
+	EndGlobalSection
+EndGlobal
