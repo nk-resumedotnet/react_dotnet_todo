@@ -1,10 +1,11 @@
 ﻿using cg4it_react_dotnet_todo.Data;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace cg4it_react_dotnet_todo.Controllers
-{
+{    
     [Route("api/[controller]")]
     [ApiController]
     public class TodoListController : ControllerBase
@@ -28,6 +29,7 @@ namespace cg4it_react_dotnet_todo.Controllers
 
         [HttpGet]
         [Route("GetToDoList")]
+        [Produces("application/json")]
         public async Task<ActionResult<List<TodoItem>>> GetToDoList()
         {
             return Ok(await _dbContext.TodoItems.ToListAsync());
@@ -48,11 +50,11 @@ namespace cg4it_react_dotnet_todo.Controllers
                 return Ok(await _dbContext.TodoItems.ToListAsync());
         }
 
-        [HttpPost]
-        [Route("DeleteTodoListTask")]
-        public async Task<ActionResult<List<TodoItem>>> DeleteTodoListTask(string taskId)
+        [HttpPost]       
+        [Route("DeleteTodoListTask")]        
+        public async Task<ActionResult<List<TodoItem>>> DeleteTodoListTask(TodoItem task)       
         {
-            var taskFound = _dbContext.TodoItems.FirstOrDefault(x => x.TaskId == taskId);
+            var taskFound = _dbContext.TodoItems.FirstOrDefault(x => x.TaskId == task.TaskId);
             if (taskFound != null)
             {
                 _dbContext.Remove(taskFound);
